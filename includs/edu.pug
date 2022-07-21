@@ -1,0 +1,37 @@
+        +mayTest('kjdshfkhkdfgkkfldjf', './', 'Ссилка2')(target="_blank" rel="noopener noreferrer")
+            p Это блок текста в миксине
+        //- Миксин с не известным количеством аргументов
+        +numbers('num', 1, 2, 3, 4, 5, 6)
+
+    // Умови
+    - var counter = 1;
+    ul.counter 
+        while counter < 6
+            if counter === 2 || counter === 4
+                li Лічильник дорівнює 2
+            else 
+                li Текст за замовчуванням
+            - counter++
+
+    |
+    |
+    // Конструкція Case
+    - var money = 500
+
+    case money 
+        when 0: -break
+        when 10: p У вас погані справи
+        when 500: p У вас все не погано
+        when 1000: p Так ви багач!
+
+    |
+    |
+    // Вивід коду
+    != 'Абзац з текстом <strong>текст</strong>'
+
+    |
+    |
+
+    // Вивід змінних в абзаці (інтеполяція) # & !
+    - var name = "Валерій Дроняк"
+    p Мене звуть #{name}

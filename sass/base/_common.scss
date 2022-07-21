@@ -1,0 +1,83 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+
+    color: $primary-text-color;
+    background-color: $primary-bg-color;
+}
+
+address {
+    font-style: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+
+    // font-weight: inherit;
+    // font-size: inherit;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    // overflow: hidden;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+
+//======================= Тимчасові стилі =======================//
+header {
+    background-color: #3b4b5b;
+    min-height: 60px;
+}
+
+main {
+    background-color: #6c3c4c;
+}
+
+footer {
+    min-height: 60px;
+    background-color: #3b4b5b;
+}
+
+.wrap {
+    text-align: center;
+    color: #ffffff;
+}
+
+a {
+    color: inherit;
+}

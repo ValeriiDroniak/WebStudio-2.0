@@ -1,0 +1,52 @@
+
+-
+    var menuSocial = [
+        {
+            title: 'Instagram',
+            url: 'https://www.instagram.com'
+        },
+        {
+            title: 'Twitter',
+            url: 'https://www.twitter.com'
+        },
+        {
+            title: 'Facebook',
+            url: 'https://www.facebook.com'
+        },
+        {
+            title: 'LinkedIn',
+            url: 'https://www.linkedin.com'
+        }
+    ]
+
+-
+    var menuData = [
+        {
+            title: 'Студия',
+            url: './'
+        },
+        {
+            title: 'Портфолио',
+            url: './portfolio.html'
+        },
+        {
+            title: 'Контакты',
+            url: '#contact'
+        }
+    ]
+
+//- each ---end--- for
+ul.menu__list.list 
+    for menu in menuData
+        li.menu__item
+            a.menu__link.link(href= menu.url)= menu.title 
+
+//- --------------------while------------------------------------
+
+- var counter = 0;
+ul.counter
+    while counter < 5
+        li.counter__item= counter++
+
+
+

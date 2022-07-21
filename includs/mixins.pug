@@ -1,0 +1,16 @@
+//- mixins--------------------------------------------
+mixin mayTest(url, anchor)
+    nav.menu
+        ul.menu__list= title
+            li.menu__item
+        a(href= url)&attributes(attributes)= anchor
+
+        if block
+            block 
+        else 
+            p Нет текста для отображения
+
+mixin numbers(id, ...items)
+    ul.numbers(id= id class="numbers--iter") 
+        each item in items 
+            li= item

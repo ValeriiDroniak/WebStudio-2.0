@@ -1,0 +1,27 @@
+include ../includs/mixins
+
+doctype html
+html(lang="ru")
+    //-head
+    include ../includs/head
+    body
+        .wrap
+            //- Header
+            header.header 
+                block header
+                    .header__container.container
+
+                        block menu
+                            include menu
+
+            main.page 
+                block main 
+                    .page__container.container
+
+            footer.footer 
+                block footer 
+                    .footer__container.container
+                        p Це блок Footer
+
+            block scripts
+                script(src="./js/script.js" type="module")

@@ -1,0 +1,25 @@
+- let siteNav = [{title: 'Студия', url: './'}, {title: 'Портфолио', url:'./portfolio.html'}, {title: 'Контакти', url: '#contacts'}]
+- let contactNav = [{title: '+38 068 70 74 896', url: 'tel:+380687079896', src: './images/icons.svg#smartphone', w: '10', h: '16'}, {title: 'valerii.droniak@gmail.com', url: 'mailto:valerii.droniak@gmail.com', src: './images/icons.svg#envelope', w: '16', h: '12'}]
+- let socialLink = [{title: 'Instagram', url: 'instagram.com'}, {title: 'Twitter', url: 'twitter.com'}, {title: 'Facebook', url: 'facebook.com'}, {title: 'LinkedIn', url: 'linkedin.com'}]
+
+
+    a.header__logo.logo(href='./') #[span Web]Studio
+    button.header__menu_btn.menu_btn(type="button")
+    .header__menu.menu
+        button.menu_btn.menu_btn--close(type="button")
+        nav.header__site_nav.site_nav
+            ul.site_nav__list.list
+                each site in siteNav
+                    li.site_nav__item.item
+                        a.menu__link.link(href= site.url)= site.title
+        .header__nav_wrap
+            ul.header__contact_nav.contact_nav
+                each contact in contactNav
+                    li.contact_nav__item.item
+                        svg.contact__icon(width= contact.w height= contact.h)
+                            use(href= contact.src)
+                        a.contact_nav__link.link(href= contact.url)= contact.title
+            ul.header__social.social
+                each social in socialLink
+                    li.social__item
+                        a.social__link.link(href= social.url)= social.title
